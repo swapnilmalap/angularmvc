@@ -1,0 +1,220 @@
+﻿
+<link href="~/Content/css/tabs.css" rel="stylesheet" />
+
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Media</strong>
+                    <small>&nbsp;upload</small>
+                </div>
+                <div class="card-block">
+                    <div class="row">
+                        <div class="form-group col-sm-2">
+                            <label for="city">Media Type</label>
+                            <select class="form-control" >
+                                <option>All</option>
+                                <option>Press Release</option>
+                                <option>Print Coverage</option>
+                                <option>TV Coverage</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label for="city">Content Type</label>
+                            <select class="form-control" >
+                                <option>All</option>
+                                <option>Video</option>
+                                <option>Images</option>
+                                <option>PDFs</option>
+                                <option>Docs</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label for="postal-code">Year</label>
+                            <select class="form-control" >
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option selected="selected">2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="postal-code">Search</label>
+                            <input type="text" class="form-control" id="postal-code" placeholder="Enter search text" value="#ashwincric">
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <button type="submit" class="btn btn-primary" style="margin-top: 30px"><i class="fa fa-dot-circle-o"></i> View</button>
+                        </div>
+                    </div>
+                    <!--/.row-->
+
+                    <div class="row">
+                        <div class="w3-container" style="width:100%">
+                            <div class="w3-row">
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Jan');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding ">Jan</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Feb');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Feb</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Mar');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Mar</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Apr');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Apr</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'May');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">May</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Jun');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red">Jun</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Jul');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Jul</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Aug');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Aug</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Sep');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Sep</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Oct');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Oct</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Nov');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Nov</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openCity(event, 'Dec');">
+                                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Dec</div>
+                                </a>
+
+                                <div id="Jan" class="w3-container city" style="display:none">
+                                    Jan
+                                </div>
+
+                                <div id="Feb" class="w3-container city" style="display:none">
+                                    Feb
+                                </div>
+
+                                <div id="Mar" class="w3-container city" style="display:none">
+                                    Mar
+                                </div>
+                                <div id="Apr" class="w3-container city" style="display:none">
+                                    Apr
+                                </div>
+
+                                <div id="May" class="w3-container city" style="display:none">
+                                  May
+                                </div>
+
+                                <div id="Jun" class="w3-container city" style="display:block">
+                                    <table class="table table-hover table-outline mb-0 hidden-sm-down" style="margin-top:10px">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">Mr Anant Goenka - The Economic Times  </a>
+                                                    <div class="small text-muted">The Hindu Business Line</div>
+                                                    <div class="small">
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). 
+                                                        | Created : 2017-05-29 11:49:32.507
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">Identifying and Developing Hi-Pos is the need of changing times </a>
+                                                    <div class="small text-muted">The Economic Times</div>
+                                                    <div class="small">
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                                        | Created : 2017-05-29 11:49:32.507
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">Ceat eyes leadership position in two-wheeler tyre market </a>
+                                                    <div class="small text-muted">The Economic Times</div>
+                                                    <div class="small">
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                                        | Created : 2017-05-29 11:49:32.507
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">The CEAT Cricket Rating Awards in Mumbai </a>
+                                                    <div class="small text-muted">The Economic Times</div>
+                                                    <div class="small">
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                                        | Created : 2017-05-29 11:49:32.507
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">Zensar acquires digital commerce technology company Keystone Logic  </a>
+                                                    <div class="small text-muted">The Economic Times</div>
+                                                    <div class="small">
+                                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                                        | Created : 2017-05-29 11:49:32.507
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="Jul" class="w3-container city" style="display:none">
+                                    Jul
+                                </div>
+
+                                <div id="Aug" class="w3-container city" style="display:none">
+                                    Aug
+                                </div>
+
+                                <div id="Sep" class="w3-container city" style="display:none">
+                                    Sep
+                                </div>
+                                <div id="Oct" class="w3-container city" style="display:none">
+                                    Oct
+                                </div>
+
+                                <div id="Nov" class="w3-container city" style="display:none">
+                                    Nov
+                                </div>
+
+                                <div id="Dec" class="w3-container city" style="display:none">
+                                    Dec
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+         tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-border-red";
+    }
+</script>

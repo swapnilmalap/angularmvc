@@ -1,0 +1,26 @@
+﻿<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" ui-sref-active="active" ui-sref="app.main"><i class="icon-film"></i> Upload Media</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref-active="active"  ui-sref="app.search"><i class="icon-magnifier"></i> Search Media</a>
+            </li>
+            <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.components')}">
+                <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.components')}" href="#"><i class="icon-user"></i> Users</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.buttons"><i class="icon-people"></i> Search Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref-active="active" ui-sref="app.components.social-buttons"><i class="icon-user-follow"></i>Add User</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item btnLogOut" style="display:none">
+                <a class="nav-link" ui-sref-active="" ui-sref="app.logout"><i class="icon-lock"></i> Log Out</a>
+            </li>
+        </ul>
+    </nav>
+</div>

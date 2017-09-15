@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,Angular 2,Angular4,Angular 4,jQuery,CSS,HTML,RWD,Dashboard,React,React.js,Vue,Vue.js">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>RPG Enterprises</title>
+    @*<base href="/RPG/">*@
+    <!-- Main styles for this application -->
+    @Styles.Render("~/Content/css/style.css")
+</head>
+<body  class="app header-fixed sidebar-fixed">
+    <!-- User Interface -->
+    <!-- Navbar -->
+    @*<div ng-include="'Content/views/common/navbar.html'"></div>*@
+    <div>@Html.Partial("_navigation")</div>
+    <div class="app-body">
+        <!-- Navigation -->
+        <div>@Html.Partial("_sidebar")</div>
+        <!-- Main content -->
+        <main class="main">
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb" breadcrumb>
+                <ncy-breadcrumb></ncy-breadcrumb>
+                <!-- Breadcrumb Menu-->
+                @*<li class="breadcrumb-menu">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+                        <a class="btn btn-secondary" ui-sref="app.main"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                        <a class="btn btn-secondary" ui-sref="app.main"><i class="icon-settings"></i> &nbsp;Settings</a>
+                    </div>
+                </li>*@
+            </ol>
+            <div class="container-fluid">
+                @RenderBody()
+                <ui-view></ui-view>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+
+        <!-- Aside Menu -->
+        @*<div ng-include="'Content/views/common/aside.html'"></div>*@
+    </div>
+    <!-- Footer -->
+    @*<div ng-include="'Content/views/common/footer.html'"></div>*@
+    <div>@Html.Partial("_footer")</div>
+    <!-- Bootstrap and necessary plugins -->
+    @Scripts.Render("~/Content/bower_components/jquery/dist/jquery.min.js")
+    @Scripts.Render("~/Content/bower_components/tether/dist/js/tether.min.js")
+    @Scripts.Render("~/Content/bower_components/bootstrap/dist/js/bootstrap.min.js")
+    <!-- AngularJS -->
+    @Scripts.Render("~/Content/bower_components/angular/angular.min.js")
+    <!-- AngularJS plugins -->
+    @Scripts.Render("~/Content/bower_components/angular-ui-router.min.js")
+    @Scripts.Render("~/Content/bower_components/oclazyload/dist/ocLazyLoad.min.js")
+    @Scripts.Render("~/Content/bower_components/angular-breadcrumb/dist/angular-breadcrumb.min.js")
+    @Scripts.Render("~/Content/bower_components/angular-loading-bar/build/loading-bar.min.js")
+    @Scripts.Render("~/Content/bower_components/angular-messages/angular-messages.min.js")
+    @Scripts.Render("~/Content/bower_components/ngRemoteValidate.js")
+    <!-- AngularJS CoreUI App scripts -->
+    @Scripts.Render("~/Content/js/app.js")
+    @Scripts.Render("~/Content/js/routes.js")
+    @Scripts.Render("~/Content/js/controllers.js")
+    @Scripts.Render("~/Content/js/directives.js")
+</body>
+</html>

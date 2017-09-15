@@ -1,0 +1,60 @@
+﻿<div ng-controller="eventCtrl">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <form name="frmEvent" novalidate>
+                    <div class="card-header">
+                        <strong>Upload Media {{firstName}}</strong>
+                    </div>
+                    <div class="card-block">
+                        <div action="" class="form-horizontal">
+                            <div ng-class="((frmEvent.eventname.$dirty || frmEvent.eventname.$touched) && frmEvent.eventname.$error.required) ? 'form-group row has-danger' : 'form-group row'">
+                                <label class="col-md-3 form-control-label" for="eventname">Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="eventname" ng-model="eventName" name="eventname" class="form-control" placeholder="Enter event name" ng-required="true">
+                                    <span class="help-block text-danger" ng-show="(frmEvent.eventname.$dirty || frmEvent.eventname.$touched) && frmEvent.eventname.$error.required">Enter event name</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="hf-password">Description</label>
+                                <div class="col-md-9">
+                                    <textarea id="textarea-input" name="textarea-input" rows="3" class="form-control" placeholder="Description.."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="hashtag">Hash Tag</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="hashtag" name="hashtag" class="form-control" placeholder="Enter hashtag">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="file-multiple-input">Files</label>
+                                <div class="col-md-9">
+                                    <input type="file" id="file-multiple-input" name="file-multiple-input" multiple>
+                                </div>
+                            </div>
+                            <div class="form-group row" ng-repeat="item in MetaTagList">
+                                <label class="col-md-3 form-control-label"><span ng-show="$first">Meta Tags</span></label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" placeholder="Value">
+                                </div>
+                                <div class="col-md-1">
+                                    <button type="button" class="btn btn-outline-danger" ng-show="!$last" ng-click="removeMetaTag(item);"><i class="fa fa-minus"></i></button>
+                                    <button type="button" class="btn btn-outline-success" ng-show="$last" ng-click="addMetaTag();"><i class="fa fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <label class="col-md-3 form-control-label"></label>
+                        <button type="submit" class="btn btn-sm btn-primary" ng-disabled="frmEvent.$invalid"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                        <button type="reset" class="btn btn-sm btn-danger" ng-click="resetMetaTag();"><i class="fa fa-ban"></i> Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

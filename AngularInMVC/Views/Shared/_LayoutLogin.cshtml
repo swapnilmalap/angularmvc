@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,Angular 2,Angular4,Angular 4,jQuery,CSS,HTML,RWD,Dashboard,React,React.js,Vue,Vue.js">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>RPG Enterprises</title>
+    <!-- Main styles for this application -->
+    @Styles.Render("~/Content/css/style.css")
+    @Styles.Render("~/Content/css/simple-line-icons.css")
+</head>
+<body class="app">
+    <div class="app-body">
+        <!-- Main content -->
+        <main class="main">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+   
+    <!-- Bootstrap and necessary plugins -->
+    @Scripts.Render("~/Content/bower_components/jquery/dist/jquery.min.js")
+    @Scripts.Render("~/Content/bower_components/tether/dist/js/tether.min.js")
+    @Scripts.Render("~/Content/bower_components/bootstrap/dist/js/bootstrap.min.js")
+</body>
+</html>
+
